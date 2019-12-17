@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    app:cardElevation="@dimen/_8sdp">
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_34sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:hint="Search Ex: Milk, Bread"
+        android:imeOptions="actionSearch"
+        android:inputType="textPersonName"/>
+
+
+</androidx.cardview.widget.CardView>

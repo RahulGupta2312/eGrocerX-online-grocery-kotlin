@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/landingScreenFragment"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/myAccountFragment"
+        android:icon="@drawable/ic_user_account"
+        android:title="My Account" />
+    <item
+        android:id="@+id/karloffDailyFragment"
+        android:icon="@drawable/ic_user_account"
+        android:title="karloff Go Daily" />
+
+    <item
+        android:icon="@drawable/ic_user_account"
+        android:title="About Us" />
+
+    <item
+        android:icon="@drawable/ic_user_account"
+        android:title="Share App" />
+
+    <item
+        android:icon="@drawable/ic_user_account"
+        android:title="Invite Friends" />
+
+    <item
+        android:icon="@drawable/ic_user_account"
+        android:title="Support" />
+
+    <item
+        android:icon="@drawable/ic_user_account"
+        android:title="Terms &amp; Conditions" />
+
+    <item
+        android:icon="@drawable/ic_user_account"
+        android:title="Privacy Policy" />
+
+    <item
+        android:icon="@drawable/ic_user_account"
+        android:title="Feedback" />
+
+
+</menu>

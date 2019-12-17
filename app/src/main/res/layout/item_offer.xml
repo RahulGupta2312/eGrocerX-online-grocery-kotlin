@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/itemOfferTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/montserrat_bold"
+        tools:text="title" />
+
+    <TextView
+        android:id="@+id/itemOfferDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8sdp"
+        tools:text="description" />
+
+    <ImageView
+        android:id="@+id/itemOfferImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:visibility="gone"
+        android:contentDescription="OfferImage"
+        android:src="@drawable/placeholder_grey"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

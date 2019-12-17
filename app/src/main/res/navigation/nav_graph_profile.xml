@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_profile"
+    app:startDestination="@id/myAccountFragment2">
+    <fragment
+        android:id="@+id/myAccountFragment2"
+        android:name="com.egrocerx.ui.account.MyAccountFragment"
+        android:label="My Account"
+        tools:layout="@layout/fragment_my_account">
+        <action
+            android:id="@+id/action_myAccountFragment2_to_myProfileFragment2"
+            app:destination="@id/myProfileFragment2" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_myOrdersFragment2"
+            app:destination="@id/myOrdersFragment2" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_walletFragment2"
+            app:destination="@id/walletFragment2" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_membershipFragment2"
+            app:destination="@id/membershipFragment2" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_myAddressesFragment2"
+            app:destination="@id/myAddressesFragment2" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_changePasswordFragment2"
+            app:destination="@id/changePasswordFragment2" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_myAccountFragment2_to_subscriptionListFragment"
+            app:destination="@id/subscriptionListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfileFragment2"
+        android:name="com.egrocerx.ui.profile.MyProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/myOrdersFragment2"
+        android:name="com.egrocerx.ui.order.history.MyOrdersFragment"
+        android:label="My Orders"
+        tools:layout="@layout/fragment_my_orders">
+        <action
+            android:id="@+id/action_myOrdersFragment2_to_orderDetailFragment2"
+            app:destination="@id/orderDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment2"
+        android:name="com.egrocerx.ui.gocash.WalletFragment"
+        android:label="eCommerceXPay"
+        tools:layout="@layout/fragment_wallet">
+        <action
+            android:id="@+id/action_walletFragment2_to_rechargeWalletFragment2"
+            app:destination="@id/rechargeWalletFragment2" />
+        <action
+            android:id="@+id/action_walletFragment2_to_sendMoneyFragment2"
+            app:destination="@id/sendMoneyFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/membershipFragment2"
+        android:name="com.egrocerx.ui.membership.MembershipFragment"
+        android:label="Membership"
+        tools:layout="@layout/fragment_membership" />
+    <fragment
+        android:id="@+id/myAddressesFragment2"
+        android:name="com.egrocerx.ui.address.MyAddressesFragment"
+        android:label="My Addresses"
+        tools:layout="@layout/fragment_my_addresses"/>
+    <fragment
+        android:id="@+id/changePasswordFragment2"
+        android:name="com.egrocerx.ui.changepassword.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/rechargeWalletFragment2"
+        android:name="com.egrocerx.ui.gocash.recharge.RechargeWalletFragment"
+        android:label="Recharge eCommerceXPay"
+        tools:layout="@layout/fragment_recharge_wallet" />
+    <fragment
+        android:id="@+id/sendMoneyFragment2"
+        android:name="com.egrocerx.ui.gocash.transfer.SendMoneyFragment"
+        android:label="Send Money" />
+    <action
+        android:id="@+id/action_global_basketFragment2"
+        app:destination="@id/basketFragment2" />
+    <fragment
+        android:id="@+id/addAddressFragment2"
+        android:name="com.egrocerx.ui.address.add.AddAddressFragment"
+        android:label="Add/Edit Address"
+        tools:layout="@layout/fragment_add_address">
+        <argument
+            android:name="mode"
+            android:defaultValue="1"
+            app:argType="integer" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="data"
+            app:argType="com.egrocerx.data.AddressModel"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_myAddressesFragment2"
+        app:destination="@id/myAddressesFragment2" />
+    <fragment
+        android:id="@+id/orderDetailFragment2"
+        android:name="com.egrocerx.ui.order.detail.OrderDetailFragment"
+        android:label="Order Detail"
+        tools:layout="@layout/fragment_order_detail">
+        <argument
+            android:name="orderId"
+            app:argType="string" />
+        <argument
+            android:name="orderStatus"
+            app:argType="string" />
+    </fragment>
+    <action android:id="@+id/action_global_addAddressFragment2" app:destination="@id/addAddressFragment2" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.egrocerx.ui.about.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.egrocerx.ui.setting.SettingFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/subscriptionListFragment"
+        android:name="com.egrocerx.ui.order.subscription.SubscriptionListFragment"
+        android:label="Subscriptions"
+        tools:layout="@layout/fragment_subscription_list" />
+</navigation>

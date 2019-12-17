@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/itemNotificationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:paddingStart="16dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingBottom="6dp"
+        android:text="Test Title"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/itemNotificationDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:paddingStart="18dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="6dp"
+        android:text="Text Description" />
+
+    <ImageView
+        android:id="@+id/itemNotificationImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:animateLayoutChanges="true"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/placeholder_grey"
+        android:visibility="gone" />
+</LinearLayout>
+

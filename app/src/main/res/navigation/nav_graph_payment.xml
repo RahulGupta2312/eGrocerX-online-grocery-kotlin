@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_payment"
+    app:startDestination="@id/deliverySlotFragment">
+
+    <fragment
+        android:id="@+id/deliverySlotFragment"
+        android:name="com.egrocerx.ui.deliveryaddress.DeliverySlotFragment"
+        android:label="Address &amp; Delivery Slot"
+        tools:layout="@layout/fragment_delivery_slot">
+        <action
+            android:id="@+id/action_deliverySlotFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.egrocerx.ui.checkout.CheckoutFragment"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_checkout">
+        <argument
+            android:name="address_text"
+            app:argType="string" />
+        <argument
+            android:name="address_id"
+            app:argType="integer" />
+        <argument
+            android:name="delivery_slot"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_makePaymentFragment"
+            app:destination="@id/makePaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/makePaymentFragment"
+        android:name="com.egrocerx.ui.payment.MakePaymentFragment"
+        android:label="Complete your order"
+        tools:layout="@layout/fragment_make_payment">
+        <!--        <action-->
+        <!--            android:id="@+id/finish_login"-->
+        <!--            app:popUpTo="@id/home"-->
+        <!--            app:popUpToInclusive="true"/>-->
+        <argument
+            android:name="order"
+            app:argType="com.egrocerx.data.Order" />
+        <argument
+            android:name="wallet_balance"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>

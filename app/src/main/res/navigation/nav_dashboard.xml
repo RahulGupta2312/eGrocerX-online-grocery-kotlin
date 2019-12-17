@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_dashboard"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.egrocerx.ui.home.HomeFragment"
+        android:label="eCommerceX"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment2_to_categoriesFragment2"
+            app:destination="@id/categoriesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment2"
+        android:name="com.egrocerx.ui.categories.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories">
+        <action
+            android:id="@+id/action_categoriesFragment2_to_karloffDailyFragment2"
+            app:destination="@id/karloffDailyFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/offersFragment2"
+        android:name="com.egrocerx.ui.offers.OffersFragment"
+        android:label="Offers"
+        tools:layout="@layout/fragment_offers">
+        <action
+            android:id="@+id/action_offersFragment2_to_nav_graph_profile"
+            app:destination="@id/nav_graph_profile" />
+    </fragment>
+    <include app:graph="@navigation/nav_graph_profile" />
+
+    <fragment
+        android:id="@+id/subcategoryFragment2"
+        android:name="com.egrocerx.ui.subcategory.SubcategoryFragment"
+        android:label="{category_name}"
+        tools:layout="@layout/fragment_subcategory">
+        <argument
+            android:name="category_id"
+            app:argType="string" />
+        <argument
+            android:name="category_name"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_subcategoryFragment2"
+        app:destination="@id/subcategoryFragment2" />
+    <fragment
+        android:id="@+id/singleCategoryFragment2"
+        android:name="com.egrocerx.ui.categories.single.SingleCategoryFragment"
+        android:label="{category_name}"
+        tools:layout="@layout/fragment_single_category">
+        <argument
+            android:name="category_id"
+            app:argType="string" />
+        <argument
+            android:name="category_name"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/singleProductFragment2"
+        android:name="com.egrocerx.ui.product.SingleProductFragment"
+        android:label="Product"
+        tools:layout="@layout/fragment_single_product">
+        <argument
+            android:name="product_id"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_singleProductFragment2"
+        app:destination="@id/singleProductFragment2" />
+    <action
+        android:id="@+id/action_global_singleCategoryFragment2"
+        app:destination="@id/singleCategoryFragment2" />
+
+    <fragment
+        android:id="@+id/notificationsFragment3"
+        android:name="com.egrocerx.ui.notifications.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <action
+        android:id="@+id/action_global_notificationsFragment3"
+        app:destination="@id/notificationsFragment3" />
+    <fragment
+        android:id="@+id/basketFragment2"
+        android:name="com.egrocerx.ui.basket.BasketFragment"
+        android:label="Basket"
+        tools:layout="@layout/fragment_basket">
+        <action
+            android:id="@+id/action_basketFragment2_to_nav_graph_payment"
+            app:destination="@id/nav_graph_payment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cancelOrderFragment3"
+        android:name="com.egrocerx.ui.cancel.CancelOrderFragment"
+        android:label="Cancel Order"
+        tools:layout="@layout/fragment_cancel_order">
+        <argument android:name="order_id" />
+        <argument
+            android:name="source"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_cancelOrderFragment3"
+        app:destination="@id/cancelOrderFragment3" />
+
+    <include app:graph="@navigation/nav_graph_payment" />
+    <action
+        android:id="@+id/action_global_basketFragment2"
+        app:destination="@id/basketFragment2" />
+    <fragment
+        android:id="@+id/karloffDailyFragment2"
+        android:name="com.egrocerx.ui.egrocerxdaily.EGrocerxDailyFragment"
+        android:label="Go Daily"
+        tools:layout="@layout/fragment_egrocerx_daily">
+        <action
+            android:id="@+id/action_karloffDailyFragment2_to_offersFragment2"
+            app:destination="@id/offersFragment2" />
+        <action
+            android:id="@+id/action_karloffDailyFragment2_to_karloffDailyDetailFragment2"
+            app:destination="@id/karloffDailyDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/karloffDailyDetailFragment2"
+        android:name="com.egrocerx.ui.egrocerxdaily.EGrocerxDailyDetailFragment"
+        android:label="{product_name}"
+        tools:layout="@layout/fragment_egrocerx_daily_detail">
+        <argument
+            android:name="product_name"
+            app:argType="string" />
+        <argument
+            android:name="product_id"
+            app:argType="integer" />
+        <argument android:name="product_mrp" />
+        <argument android:name="product_subscription_price" />
+        <argument
+            android:name="product_packing"
+            app:argType="string" />
+        <argument
+            android:name="product_image"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment2"
+        android:name="com.egrocerx.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+    <action
+        android:id="@+id/action_global_searchFragment2"
+        app:destination="@id/searchFragment2" />
+
+
+</navigation>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp">
+
+    <ImageView
+        android:contentDescription="@null"
+        android:id="@+id/appCompatCheckBox"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@android:drawable/checkbox_off_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/membershipPackageName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/appCompatCheckBox"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Package 1" />
+
+    <TextView
+        android:id="@+id/membershipPackageDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/membershipPackageName"
+        app:layout_constraintTop_toBottomOf="@+id/membershipPackageName"
+        tools:text="Lorem Ipsum \nText Lorem Ipsum" />
+
+    <TextView
+        android:id="@+id/membershipPackagePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/bg_strikethrough"
+        app:layout_constraintStart_toStartOf="@+id/membershipPackageDetail"
+        app:layout_constraintTop_toBottomOf="@+id/membershipPackageDetail"
+        tools:text="500" />
+
+    <TextView
+        android:id="@+id/membershipPackageSalePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/membershipPackagePrice"
+        app:layout_constraintStart_toEndOf="@+id/membershipPackagePrice"
+        tools:text="200" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

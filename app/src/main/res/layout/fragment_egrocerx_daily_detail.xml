@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/subscriptionProductImage"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/placeholder_grey_rounded" />
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--tools:text="Brand Name" />-->
+
+    <TextView
+        android:id="@+id/subscriptionProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBlack"
+        tools:text="Product Name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subscriptionProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_strikethrough"
+        tools:text="Packaging with Mrp" />
+
+    <TextView
+        android:id="@+id/subscriptionProductSubsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/_16ssp"
+        tools:text="Subscription Price" />
+
+    <TextView
+        android:id="@+id/subscriptionProductPackaging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="Quantity"
+        android:textAllCaps="true" />
+
+    <include layout="@layout/layout_quantity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:text="Frequency"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/frequencyChipsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:chipSpacingVertical="@dimen/_4sdp"
+        app:chipSpacingHorizontal="@dimen/_8sdp"
+        app:singleSelection="true">
+
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:checked="true"-->
+        <!--android:text="Daily" />-->
+
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Alternate Day" />-->
+
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Every 3 Days" />-->
+
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Weekly" />-->
+
+        <!--<com.google.android.material.chip.Chip-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Monthly" /> -->
+    </com.google.android.material.chip.ChipGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGrey" />
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="@dimen/_5sdp"-->
+    <!--android:drawableEnd="@drawable/ic_edit"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="Delivery Address"-->
+    <!--android:textAllCaps="true" />-->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center"
+        android:text="** Subscription price mat change as per market rates."
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_8ssp"
+        android:textStyle="bold" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirmSubscription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/bg_btn_green"
+        android:text="Confirm Subscription"
+        android:textColor="@color/colorWhite" />
+
+
+</LinearLayout>

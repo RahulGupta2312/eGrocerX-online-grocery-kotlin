@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment2"
+        android:icon="@drawable/ic_lock_24dp"
+        android:title="Home" />
+    <item
+        android:id="@+id/categoriesFragment2"
+        android:icon="@drawable/ic_categories"
+        android:title="Categories" />
+    <item
+        android:id="@+id/karloffDailyFragment2"
+        android:icon="@drawable/ic_go_daily"
+        android:title="Go daily" />
+    <item
+        android:id="@+id/offersFragment2"
+        android:icon="@drawable/ic_offers"
+        android:title="Offers" />
+    <!--    <item-->
+    <!--        android:id="@+id/basketFragment"-->
+    <!--        android:icon="@drawable/ic_shopping_cart"-->
+    <!--        android:title="Basket" /> -->
+    <item
+        android:id="@+id/nav_graph_profile"
+        android:icon="@drawable/ic_user_account"
+        android:title="Account" />
+</menu>

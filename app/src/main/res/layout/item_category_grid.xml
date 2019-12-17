@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_1sdp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/itemCategoryGridImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/placeholder_grey_rounded"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/itemCategoryGridName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:gravity="center"
+        android:lines="2"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_9ssp" />
+
+</LinearLayout>
